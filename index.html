@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="style.css">
+  <title>p5.js Sketch with Control Panel</title>
+  <!-- Link to your local p5.js file -->
+  <script src="./p5.js"></script>
+  <!-- Link to your styles -->
+  <link rel="stylesheet" href="https://use.typekit.net/dio0nhy.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Exo:ital,wght@0,100..900;1,100..900&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Container for the p5.js canvas on the left -->
+  <div id="sketchCanvas"></div>
+  
+  <!-- Control panel on the right side -->
+  <div class="control-panel">
+    <h1 class="panel-title">Emotion Control Deck</h1>
+      <h1 class="panel-subtitle">The future is shaped by our current imaginations. Emotional data serves as a navigational tool, guiding the way forward. Your input helps calibrate our shared timeline. Enter your current emotional status. Let the machine know. Let the future listen.
+      </h1>
+    
+    
+    <div class="panel-section">
+
+      <div class="section-header">How do you feel about the future?</div>
+      <div class="status-indicators">
+        <div class="status-item clickable" data-status="fearful">
+          <span class="status-label">Fearful about the Future</span>
+          <div class="status-light fear"></div>
+        </div>
+        <div class="status-item clickable" data-status="hopeful-fearful">
+            <span class="status-label">Used to Be Hopeful, Now Fearful</span>
+            <div class="status-light hopetofear"></div>
+          </div>
+        <div class="status-item clickable" data-status="hopeful">
+          <span class="status-label">Hopeful for the Future</span>
+          <div class="status-light hope"></div>
+        </div>
+        <div class="status-item clickable" data-status="fearful-hopeful">
+          <span class="status-label">Used to Be Fearful, Now Hopeful</span>
+          <div class="status-light feartohope"></div>
+        </div>
+      </div>
+      <br>
+      <div class="control-grid">
+       
+        <div class="control-item">
+          <textarea id="fear-text" class="control-textarea" placeholder="I feel this way because..." ></textarea>
+        </div>
+      </div>
+      <button id="submit-button" class="submit-button">Submit</button>
+    </div>
+    
+    <!-- <div class="panel-section">
+      <div class="section-header">I want to put the quiz here</div>
+      <div class="chart-container">
+        <canvas id="emotionChart"></canvas>
+      </div>
+    </div> -->
+    
+    
+    <div class="panel-section">
+      <div class="section-header">Sentiment Response Terminal</div>
+      <div class="terminal">
+        <div class="terminal-output">
+          <!-- <div class="terminal-line">Initializing emotion control system...</div>
+          <div class="terminal-line">Loading emotion data set...</div> -->
+          <!-- <div class="terminal-line success">System online. Ready for analysis.</div>
+        </div> -->
+      </div>
+    </div>
+    
+    
+  </div>
+  <div class="panel-footer">
+    <div class="system-time">SET TO PREDICT YEAR 3108</div>
+    <div class="system-status">ONLINE</div>
+  </div>
+
+  
+
+  <script src="https://www.gstatic.com/firebasejs/11.8.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/11.8.1/firebase-firestore-compat.js"></script>
+  <script src="./firebase.js"></script>
+  
+  <!-- Scripts -->
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script> -->
+  <script src="./sketch.js" defer></script>
+  <!-- <script src="./control-panel.js" defer></ script> -->
+
+</body>
+</html>
